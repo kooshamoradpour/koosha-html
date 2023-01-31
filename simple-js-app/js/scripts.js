@@ -15,13 +15,50 @@ let pokemonList = [
         type: ['Psychic', 'ice']
     }
 ];
-
-for (let i=0; i < pokemonList.length; i++){
-    if (pokemonList[i].height > 1){
-        document.write ('Wow, that\s big!')
+let pokemonList2 = [
+    {
+        name:'Lion',
+        height: 1,
+        type: ['bite', 'run']
+    },
+    {
+        name: 'tiger',
+        height: 2.5,
+        type:['killer', 'slow']
+    },
+    {
+        name: 'beer',
+        height: 0.9,
+        type: ['climbing', 'funy']
     }
-    document.write(pokemonList[i].name + pokemonList[i].height)
+];
+function printArrayDetails (list){
+for (let i=0; i < list.length; i++){
+    if (list[i].height > 1){
+        document.write(list[i].name + list[i].height + ' ( Wow, that\s big! )')
+    }
+    else{
+        document.write("<p>" + list[i].name + list[i].height + "</p>")
+    }
+  }
+};
+printArrayDetails(pokemonList);
+printArrayDetails(pokemonList2);
+
+function divide(dividend, divisor){
+    if (divisor === 0){
+        return "You\re trying to divide by zero.";
+    }
+    else {
+        let result= dividend / divisor;
+        return result;
+    }
 }
+console.log(divide(12,-4))
+
+const myElement = document.getElementById("demo");
+myElement.style.color = "red";
+
 
 // if/else/else is practice
 // let day= "Saturday"
