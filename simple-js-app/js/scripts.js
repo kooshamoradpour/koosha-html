@@ -54,11 +54,37 @@ function divide(dividend, divisor){
         return result;
     }
 }
-console.log(divide(12,-4))
+function runThisLater(){
+    console.log(divide(12, 2))
+}
+setTimeout(runThisLater, 5000) // this is a predefind function
+// console.log(divide(12,-4))
+
+let inpotName= prompt ('Please enter you name')
+console.log(inpotName)
+let Accepted = confirm('Do you accept?')
+console.log(Accepted)
 
 const myElement = document.getElementById("demo");
 myElement.style.color = "red";
 
+// calculator functions:
+function add(number1, number2) {
+    let result = number1 + number2
+    return result
+  }
+  function subtract(number1, number2) {
+    let result = number1 - number2;
+    return result;
+  }
+  function multiply(number1, number2) {
+    let result = number1 * number2;
+    return result;
+  }
+  function divide(number1, number2) {
+    let result = number1 / number2;
+    return result
+  }
 
 // if/else/else is practice
 // let day= "Saturday"
