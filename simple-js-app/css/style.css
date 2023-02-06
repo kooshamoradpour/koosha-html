@@ -21,7 +21,6 @@ h3 {
     text-decoration: underline;
   }
 
-
 .navigation-list {
     list-style-type: none;
   }
@@ -31,15 +30,6 @@ h3 {
 }
 .navigation-list__item--active {
     text-decoration: none;
-}
-
-
-
-.profile__portrait {
-    float: left;
-    width: 250px;
-    margin-right: 40px;
-    border-radius: 50%;
 }
 
 .page-header {
@@ -58,67 +48,12 @@ h3 {
     text-align: right;
   }
 
-
 .page-footer{
     clear: both;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-
-.profile {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  *{
-      box-sizing: border-box;
-  }
-.profile__portrait {
-      flex: 1 1 100px;
-  }
-
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-}
-.grid__item {
-    background-color: rgb(149, 151, 153);
-    margin: 20px;
-    
-}
-.grid__item:last-child {
-    grid-column: 3 / 3;
-    grid-row: 1 /3;
-}
-
-@media all and (max-width: 500px){
-    .grid {
-        grid-template-columns: 1fr;
-        grid-gap: 10px;
-    }
-    .grid__item:last-child {
-        grid-column: auto / auto;
-        grid-row: auto / auto;
-    }
-    h1 {
-        font-size: 22px;
-    }
-}
-@media all and (min-width: 500px) and (max-width: 750px){
-    .grid {
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 10px;
-    }
-    .grid__item:last-child {
-      grid-column: auto / auto;
-      grid-row: auto / auto;
-    }
-    h1 {
-      font-size: 22px;
-    }
-  }
-
 
 button:hover,
 button:focus,
@@ -139,49 +74,70 @@ button:focus,
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
     transition-duration: 0.2s; 
   }
-
-  .about {
-    max-width: 200px;
-    margin: 0 auto;
-  }
-  *{
-      box-sizing: border-box;
-  }
-
-  @keyframes color-change {
-      0% {
-          fill: #edc655;
-      }
-      50% {
-          fill: #fcffad;
-      }
-      100% {
-          fill: #f76414;
-      }
-  }
-.sun {
-    animation: 4s color-change infinite alternate linear;
+/* calculator CSS */
+*{
+  box-sizing: border-box;
 }
 
-@keyframes cloud-move {
-    from {
-        transform: translate(0, 50px);
-    }
-    to {
-        transform: translate(200px, 50px);
-    }
+.calculator{
+  width: 300px;
+  border: 1px black solid;
+  padding: 10px;
+  margin: 20px auto;
 }
-  .cloud-front {
-    animation: 30s cloud-move infinite alternate linear;
+
+.input-output-container{
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
 }
-@keyframes cloud-move-reverse {
-    from {
-      transform: translate(446px, 48px);
-    }
-    to {
-      transform: translate(100px, 48px);
-    }
-  }
-  .cloud-back {
-    animation: 34s cloud-move-reverse infinite alternate linear;
-  }
+
+.input-output-container > *{
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  
+  margin: 0;
+  padding: 0;
+}
+
+.input{
+  width: 20%;
+}
+
+
+.operator{
+  border: 0;
+  font-size: 1.3em;
+  font-weight: bolder;
+  width: 5%;
+}
+
+.equal-sign{
+  font-size: 1.3em;
+  font-weight: bolder;
+  width: 5%;
+}
+
+.output{
+  border: 1px black solid;
+  width: 45%;
+}
+
+.buttons-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+button{
+  height: 50px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+button#eql{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
