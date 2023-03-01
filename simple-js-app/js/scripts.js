@@ -32,18 +32,26 @@ let pokemonList2 = [
         type: ['climbing', 'funy']
     }
 ];
-function printArrayDetails (list){
-for (let i=0; i < list.length; i++){
-    if (list[i].height > 1){
-        document.write(list[i].name + list[i].height + ' ( Wow, that\s big! )')
+pokemonList.forEach(function(list){
+    if (list.height > 1){
+        document.write(list.name + list.height + ' ( woow, that\s big) ')
     }
     else{
-        document.write("<p>" + list[i].name + list[i].height + "</p>")
+        document.write("<p>" + list.name + list.height + "</p>")
     }
-  }
-};
-printArrayDetails(pokemonList);
-printArrayDetails(pokemonList2);
+})
+// function printArrayDetails (list){
+// for (let i=0; i < list.length; i++){
+//     if (list[i].height > 1){
+//         document.write(list[i].name + list[i].height + ' ( Wow, that\s big! )')
+//     }
+//     else{
+//         document.write("<p>" + list[i].name + list[i].height + "</p>")
+//     }
+//   }
+// };
+// printArrayDetails(pokemonList);
+// printArrayDetails(pokemonList2);
 
 function divide(dividend, divisor){
     if (divisor === 0){
@@ -85,6 +93,56 @@ function add(number1, number2) {
     let result = number1 / number2;
     return result
   }
+
+  let operatorElement = document.querySelector('.operator');
+  let operator = "+";
+  function calculate() {
+    let number1 = parseInt(document.querySelector('#input1').value);
+    let number2 = parseInt(document.querySelector('#input2').value);
+
+
+
+    let result = 0;
+    switch (operator) {
+      case "+":
+        result = add(number1, number2);
+        break;
+      case "-":
+        result = subtract(number1, number2);
+        break;
+      case "*":
+        result = multiply(number1, number2);
+        break;
+      case "/":
+        result = divide(number1, number2);
+        break;
+    }
+    document.querySelector('.output').innerText = result;
+  }
+  document.querySelector('#add').addEventListener('click', function () {
+    operator = "+";
+    operatorElement.value = operator;
+  });
+
+  document.querySelector('#sub').addEventListener('click', function () {
+    operator = "-";
+    operatorElement.value = operator;
+  });
+
+  document.querySelector('#mul').addEventListener('click', function () {
+    operator = "*";
+    operatorElement.value = operator;
+  });
+
+  document.querySelector('#div').addEventListener('click', function () {
+    operator = "/";
+    operatorElement.value = operator;
+  });
+
+  document.querySelector('#eql').addEventListener('click', function () {
+    calculate();
+  });
+
 
 // if/else/else is practice
 // let day= "Saturday"
