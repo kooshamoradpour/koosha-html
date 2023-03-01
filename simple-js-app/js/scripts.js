@@ -53,25 +53,25 @@ pokemonList.forEach(function(list){
 // printArrayDetails(pokemonList);
 // printArrayDetails(pokemonList2);
 
-function divide(dividend, divisor){
-    if (divisor === 0){
-        return "You\re trying to divide by zero.";
-    }
-    else {
-        let result= dividend / divisor;
-        return result;
-    }
-}
-function runThisLater(){
-    console.log(divide(12, 2))
-}
-setTimeout(runThisLater, 5000) // this is a predefind function
+// // function divide(dividend, divisor){
+// //     if (divisor === 0){
+// //         return "You\re trying to divide by zero.";
+// //     }
+// //     else {
+// //         let result= dividend / divisor;
+// //         return result;
+// //     }
+// // }
+// // function runThisLater(){
+// //     console.log(divide(12, 2))
+// }
+// setTimeout(runThisLater, 5000) // this is a predefind function
 // console.log(divide(12,-4))
 
-let inpotName= prompt ('Please enter you name')
-console.log(inpotName)
-let Accepted = confirm('Do you accept?')
-console.log(Accepted)
+// let inpotName= prompt ('Please enter you name')
+// console.log(inpotName)
+// let Accepted = confirm('Do you accept?')
+// console.log(Accepted)
 
 const myElement = document.getElementById("demo");
 myElement.style.color = "red";

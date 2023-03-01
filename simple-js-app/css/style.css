@@ -141,3 +141,10 @@ button#eql{
   grid-column-start: 1;
   grid-column-end: 3;
 }
+
+#demo {
+  color: #004cff;
+  width: 300px;
+  padding: 10px;
+  margin: 20px auto;
+}
