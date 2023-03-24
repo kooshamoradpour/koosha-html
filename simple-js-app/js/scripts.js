@@ -1,45 +1,45 @@
-let pokemonList = [
-    {
-        name: 'Charizard',
-        height: 1.7,
-        type: ['fire', 'flying']
-    },
-    {
-        name: 'Pikachu',
-        height: 0.4,
-        type: ['Electric']
-    },
-    {
-        name: 'Jynx',
-        height: 1.4,
-        type: ['Psychic', 'ice']
-    }
-];
-let pokemonList2 = [
-    {
-        name:'Lion',
-        height: 1,
-        type: ['bite', 'run']
-    },
-    {
-        name: 'tiger',
-        height: 2.5,
-        type:['killer', 'slow']
-    },
-    {
-        name: 'beer',
-        height: 0.9,
-        type: ['climbing', 'funy']
-    }
-];
-pokemonList.forEach(function(list){
-    if (list.height > 1){
-        document.write(list.name + list.height + ' ( woow, that\s big) ')
-    }
-    else{
-        document.write("<p>" + list.name + list.height + "</p>")
-    }
-})
+// let pokemonList = [
+//     {
+//         name: 'Charizard',
+//         height: 1.7,
+//         type: ['fire', 'flying']
+//     },
+//     {
+//         name: 'Pikachu',
+//         height: 0.4,
+//         type: ['Electric']
+//     },
+//     {
+//         name: 'Jynx',
+//         height: 1.4,
+//         type: ['Psychic', 'ice']
+//     }
+// ];
+// let pokemonList2 = [
+//     {
+//         name:'Lion',
+//         height: 1,
+//         type: ['bite', 'run']
+//     },
+//     {
+//         name: 'tiger',
+//         height: 2.5,
+//         type:['killer', 'slow']
+//     },
+//     {
+//         name: 'beer',
+//         height: 0.9,
+//         type: ['climbing', 'funy']
+//     }
+// ];
+// pokemonList.forEach(function(list){
+//     if (list.height > 1){
+//         document.write(list.name + list.height + ' ( woow, that\s big) ')
+//     }
+//     else{
+//         document.write("<p>" + list.name + list.height + "</p>")
+//     }
+// })
 // function printArrayDetails (list){
 // for (let i=0; i < list.length; i++){
 //     if (list[i].height > 1){
